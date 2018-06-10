@@ -5,6 +5,12 @@ dist: trusty
 services:
   - docker
 
+branches:
+  only:
+    - master
+    #tag xx.yy.zz or xx.yy.zz-SNAPSHOT
+    - /^\d+\.\d+(\.\d+)?(-\S*)?$/
+
 language: python
 
 install:
