@@ -2,7 +2,9 @@ FROM stevenpollack/docker-rserve
 
 MAINTAINER "Henrique Costa" henrique.costa@gmail.com
 
-RUN install2.r --error -r "https://cran.rstudio.com" caret \
+RUN apt-get update \
+     && apt-get install -y libnlopt-dev \
+     && install2.r --error -r "https://cran.rstudio.com" caret \
      && r -de "library(caret); modNames <- unique(modelLookup()[modelLookup()\$forClass,c(1)]); install.packages(modNames);"\
      && rm -rf /tmp/downloaded_packages/ /tmp/*.rds\
     \
