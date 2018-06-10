@@ -1,0 +1,16 @@
+sudo: required
+
+dist: trusty
+
+services:
+  - docker
+
+language: python
+
+install:
+  - docker build -t container -f dockerfiles/Dockerfile .
+
+script:
+  - docker run --name cont -p 6311:6311 -d container
+  - docker ps | grep -q cont
+
