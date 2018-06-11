@@ -1,5 +1,5 @@
 # rserve-caret
-[![Build Status](https://travis-ci.com/henriquevcosta/rserve-caret.svg?branch=master)](https://travis-ci.com/henriquevcosta/rserve-caret)
+[![Build Status](https://travis-ci.com/feedzai/rserve-caret.svg?branch=master)](https://travis-ci.com/feedzai/rserve-caret)
 
 Docker container running RServe with caret installed
 
